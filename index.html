@@ -12,6 +12,7 @@
          html, body {
          overflow: auto;
          width: auto;
+       
          }
          div.main-container {
          width: fit-content;
@@ -19,27 +20,38 @@
          div.month-container {
          width: 100%;
          }
-         div.week-container {
-         width: fit-content;
-         }
          td.day-container {
            min-width: 170px;
            width: 170px;
-           max-width: 182px;  
+           max-width: 182px;
+           
          }
-         td.teams_container{
-           background: #64d891;
+         td.member-container{
            min-width: 170px;
            width: 170px;
            max-width: 182px;
-           color: rgb(55, 55, 55);
-           
+           color: white;
            font-weight: 500;
          }
-         div.task-list {
+         div.task-card {
            background: rgb(242, 242, 222);
            color: black;
-           min-height: 50px;
+           min-height: 60px;
+         }
+         td.team-header {
+           border:none;
+           color: white;
+         }
+         tr.week-head{
+           width: 100%;
+         }
+         
+         
+         .lightgreen {
+           background: #64d891;
+         }
+         .purple {
+           background: #ff0066;
          }
       </style>
 </head>
@@ -48,7 +60,7 @@
 <div class="container-fluid mt-4  main-container">
   <table class="table table-bordered week-container">
     <thead>
-      <tr class="team-row">
+      <tr class="week-head">
         <th class="text-center">Teams</th>
         <th class="text-center">Sunday</th>
         <th class="text-center">Monday</th>
@@ -60,43 +72,56 @@
       </tr>
     </thead>
     <tbody>
-
+    
+      <!-- team start -->
+      <tr class="team-row">
+        <td class="text-center team-header lightgreen"><h5>Team1</h5></td>
+        <td class="team-header lightgreen"></td>
+        <td class="team-header lightgreen"></td>
+        <td class="team-header lightgreen"></td>
+        <td class="team-header lightgreen"></td>
+        <td class="team-header lightgreen"></td>
+        <td class="team-header lightgreen"></td>
+        <td class="team-header lightgreen"></td>
+      </tr>
+      
+      
       <tr>
-        <td class="teams_container ">
-          Team 1      
+        <td class="member-container lightgreen">
+          Member 1      
         </td>
-        <td class="day-container bg-info text-white">
-          <div class="task-list">
-          
-          </div>     
-        </td>
-        <td class="day-container bg-warning text-white">
-          <div class="task-list">
+        <td class="day-container bg-info ">
+          <div class="task-card">
           
           </div>
         </td>
-        <td class="day-container bg-info text-white">
-          <div class="task-list">
+        <td class="day-container bg-warning ">
+          <div class="task-card">
           
           </div>
         </td>
-        <td class="day-container bg-warning text-white">
-          <div class="task-list">
+        <td class="day-container bg-info ">
+          <div class="task-card">
           
           </div>
         </td>
-        <td class="day-container bg-info text-white">
-          <div class="task-list">
+        <td class="day-container bg-warning ">
+          <div class="task-card">
           
           </div>
         </td>
-        <td class="day-container bg-primary text-white">
-          <div class="task-list">
+        <td class="day-container bg-info ">
+          <div class="task-card">
           
           </div>
         </td>
-        <td class="day-container bg-info text-white">
-          <div class="task-list">
+        <td class="day-container bg-primary ">
+          <div class="task-card">
+          
+          </div>
+        </td>
+        <td class="day-container bg-info ">
+          <div class="task-card">
           
           </div>
         </td>
@@ -104,41 +129,41 @@
       
 
       <tr>
-        <td class="teams_container">
-          Team 2
+        <td class="member-container lightgreen">
+          Member 2
         </td>
-        <td class="day-container bg-info text-white">
-          <div class="task-list">
+        <td class="day-container bg-info ">
+          <div class="task-card">
           
           </div>     
         </td>
-        <td class="day-container bg-warning text-white">
-          <div class="task-list">
+        <td class="day-container bg-warning ">
+          <div class="task-card">
           
           </div>
         </td>
-        <td class="day-container bg-info text-white">
-          <div class="task-list">
+        <td class="day-container bg-info ">
+          <div class="task-card">
           
           </div>
         </td>
-        <td class="day-container bg-warning text-white">
-          <div class="task-list">
+        <td class="day-container bg-warning ">
+          <div class="task-card">
           
           </div>
         </td>
-        <td class="day-container bg-info text-white">
-          <div class="task-list">
+        <td class="day-container bg-info ">
+          <div class="task-card">
           
           </div>
         </td>
-        <td class="day-container bg-primary text-white">
-          <div class="task-list">
+        <td class="day-container bg-primary ">
+          <div class="task-card">
           
           </div>
         </td>
-        <td class="day-container bg-info text-white">
-          <div class="task-list">
+        <td class="day-container bg-info ">
+          <div class="task-card">
           
           </div>
         </td>
@@ -146,41 +171,41 @@
 
 
       <tr>
-        <td class="teams_container">
-          Team 3      
+        <td class="member-container lightgreen">
+          Member 3      
         </td>
-        <td class="day-container bg-info text-white">
-          <div class="task-list">
+        <td class="day-container bg-info ">
+          <div class="task-card">
           
           </div>     
         </td>
-        <td class="day-container bg-warning text-white">
-          <div class="task-list">
+        <td class="day-container bg-warning ">
+          <div class="task-card">
           
           </div>
         </td>
-        <td class="day-container bg-info text-white">
-          <div class="task-list">
+        <td class="day-container bg-info ">
+          <div class="task-card">
           
           </div>
         </td>
-        <td class="day-container bg-warning text-white">
-          <div class="task-list">
+        <td class="day-container bg-warning ">
+          <div class="task-card">
           
           </div>
         </td>
-        <td class="day-container bg-info text-white">
-          <div class="task-list">
+        <td class="day-container bg-info ">
+          <div class="task-card">
           
           </div>
         </td>
-        <td class="day-container bg-primary text-white">
-          <div class="task-list">
+        <td class="day-container bg-primary ">
+          <div class="task-card">
           
           </div>
         </td>
-        <td class="day-container bg-info text-white">
-          <div class="task-list">
+        <td class="day-container bg-info ">
+          <div class="task-card">
           
           </div>
         </td>
@@ -188,45 +213,229 @@
       
 
       <tr>
-        <td class="teams_container">
-          Team 4      
+        <td class="member-container lightgreen">
+          Member 4      
         </td>
-        <td class="day-container bg-info text-white">
-          <div class="task-list">
+        <td class="day-container bg-info ">
+          <div class="task-card">
           
           </div>     
         </td>
-        <td class="day-container bg-warning text-white">
-          <div class="task-list">
+        <td class="day-container bg-warning ">
+          <div class="task-card">
           
           </div>
         </td>
-        <td class="day-container bg-info text-white">
-          <div class="task-list">
+        <td class="day-container bg-info ">
+          <div class="task-card">
           
           </div>
         </td>
-        <td class="day-container bg-warning text-white">
-          <div class="task-list">
+        <td class="day-container bg-warning ">
+          <div class="task-card">
           
           </div>
         </td>
-        <td class="day-container bg-info text-white">
-          <div class="task-list">
+        <td class="day-container bg-info ">
+          <div class="task-card">
           
           </div>
         </td>
-        <td class="day-container bg-primary text-white">
-          <div class="task-list">
+        <td class="day-container bg-primary ">
+          <div class="task-card">
           
           </div>
         </td>
-        <td class="day-container bg-info text-white">
-          <div class="task-list">
+        <td class="day-container bg-info ">
+          <div class="task-card">
           
           </div>
         </td>
       </tr>
+      
+      <!-- Team End -->
+      
+     <!-- team start -->
+      <tr class="team-row">
+        <td class="text-center team-header purple"><h5>Teem2</h5></td>
+        <td class="team-header purple"></td>
+        <td class="team-header purple"></td>
+        <td class="team-header purple"></td>
+        <td class="team-header purple"></td>
+        <td class="team-header purple"></td>
+        <td class="team-header purple"></td>
+        <td class="team-header purple"></td>
+      </tr>
+      
+      
+      <tr>
+        <td class="member-container purple">
+          Member 1     
+        </td>
+        <td class="day-container bg-info ">
+          <div class="task-card">
+          
+          </div>
+        </td>
+        <td class="day-container bg-warning ">
+          <div class="task-card">
+          
+          </div>
+        </td>
+        <td class="day-container bg-info ">
+          <div class="task-card">
+          
+          </div>
+        </td>
+        <td class="day-container bg-warning ">
+          <div class="task-card">
+          
+          </div>
+        </td>
+        <td class="day-container bg-info ">
+          <div class="task-card">
+          
+          </div>
+        </td>
+        <td class="day-container bg-primary ">
+          <div class="task-card">
+          
+          </div>
+        </td>
+        <td class="day-container bg-info ">
+          <div class="task-card">
+          
+          </div>
+        </td>
+      </tr>
+      
+
+      <tr>
+        <td class="member-container purple">
+          Member 2
+        </td>
+        <td class="day-container bg-info ">
+          <div class="task-card">
+          
+          </div>     
+        </td>
+        <td class="day-container bg-warning ">
+          <div class="task-card">
+          
+          </div>
+        </td>
+        <td class="day-container bg-info ">
+          <div class="task-card">
+          
+          </div>
+        </td>
+        <td class="day-container bg-warning ">
+          <div class="task-card">
+          
+          </div>
+        </td>
+        <td class="day-container bg-info ">
+          <div class="task-card">
+          
+          </div>
+        </td>
+        <td class="day-container bg-primary ">
+          <div class="task-card">
+          
+          </div>
+        </td>
+        <td class="day-container bg-info ">
+          <div class="task-card">
+          
+          </div>
+        </td>
+      </tr>
+
+
+      <tr>
+        <td class="member-container purple">
+          Member 3      
+        </td>
+        <td class="day-container bg-info ">
+          <div class="task-card">
+          
+          </div>     
+        </td>
+        <td class="day-container bg-warning ">
+          <div class="task-card">
+          
+          </div>
+        </td>
+        <td class="day-container bg-info ">
+          <div class="task-card">
+          
+          </div>
+        </td>
+        <td class="day-container bg-warning ">
+          <div class="task-card">
+          
+          </div>
+        </td>
+        <td class="day-container bg-info ">
+          <div class="task-card">
+          
+          </div>
+        </td>
+        <td class="day-container bg-primary ">
+          <div class="task-card">
+          
+          </div>
+        </td>
+        <td class="day-container bg-info ">
+          <div class="task-card">
+          
+          </div>
+        </td>
+      </tr>
+      
+
+      <tr>
+        <td class="member-container purple">
+          Member 4      
+        </td>
+        <td class="day-container bg-info ">
+          <div class="task-card">
+          
+          </div>     
+        </td>
+        <td class="day-container bg-warning ">
+          <div class="task-card">
+          
+          </div>
+        </td>
+        <td class="day-container bg-info ">
+          <div class="task-card">
+          
+          </div>
+        </td>
+        <td class="day-container bg-warning ">
+          <div class="task-card">
+          
+          </div>
+        </td>
+        <td class="day-container bg-info ">
+          <div class="task-card">
+          
+          </div>
+        </td>
+        <td class="day-container bg-primary ">
+          <div class="task-card">
+          
+          </div>
+        </td>
+        <td class="day-container bg-info ">
+          <div class="task-card">
+          
+          </div>
+        </td>
+      </tr>
+      
+      <!-- Team End -->      
     </tbody>
   </table>
 </div>
