@@ -54,6 +54,7 @@
         <th>ID</th>
         <th>Title</th>
         <th>Color Label</th>
+        <th>Total Memebers</th>
         <th>Actions</th>
       </tr>
     </thead>
@@ -62,6 +63,7 @@
         <td>1</td>
         <td>Marketing</td>
         <td><span class="color_viewer" style="background:orange;"></span> orange </td>
+        <td>2</td>
         <td>
           <button class="btn btn-success" data-toggle="modal" data-target="#editTeam">Edit</button>
           <button class="btn btn-danger" data-toggle="tooltip" title="Note By removing a team, you accept the removal of all members of that team from the system">Remove</button>
@@ -72,6 +74,7 @@
         <td>2</td>
         <td>Ninjas</td>
         <td><span class="color_viewer" style="background:black;"></span> black</td>
+        <td>3</td>
         <td>
            <button class="btn btn-success" data-toggle="modal" data-target="#editTeam">Edit</button>
           <button class="btn btn-danger" data-toggle="tooltip" title="Note By removing a team, you accept the removal of all members of that team from the system">Remove</button>
@@ -81,6 +84,7 @@
         <td>3</td>
         <td>Mangers</td>
         <td><span class="color_viewer" style="background:green;"></span> custom_green</td>
+        <td>2</td>
         <td>
            <button class="btn btn-success" data-toggle="modal" data-target="#editTeam">Edit</button>
           <button class="btn btn-danger" data-toggle="tooltip" title="Note By removing a team, you accept the removal of all members of that team from the system">Remove</button>
@@ -273,7 +277,7 @@
   
   
   
-   <!-- Edit Team Model -->
+   <!-- Edit Memeber Model -->
   <div class="modal" id="editMemeber">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -300,27 +304,38 @@
   <!-- end model -->
   
   
-    <!-- Edit Team Model -->
+    <!-- Add Team Model -->
   <div class="modal" id="addTeam">
     <div class="modal-dialog">
-      <div class="modal-content">
-      
+      <div class="modal-content">      
         <!-- Modal Header -->
         <div class="modal-header">
-          <h4 class="modal-title">Team Name</h4>
+          <h4 class="modal-title">Add New Team</h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-        
+        </div>        
         <!-- Modal body -->
         <div class="modal-body">
-          add Team..
+         <form>
+           <div class="form-group">
+            <label for="email">Title:</label>
+            <input type="email" class="form-control" placeholder="Enter email" id="email" required>
+          </div>
+  
+  <div class="form-group">
+    <label for="pwd">Color:</label>
+    <input type="text" class="form-control" placeholder="Enter Label Color" id="classname">
+    <input type="color" class="form-control" id="classcolor">
+  </div>
+          
         </div>
         
         <!-- Modal footer -->
         <div class="modal-footer">
+          
           <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+           <button type="submit" class="btn btn-primary">Submit</button>
         </div>
-        
+        </form>
       </div>
     </div>
   </div>
@@ -333,19 +348,59 @@
       
         <!-- Modal Header -->
         <div class="modal-header">
-          <h4 class="modal-title">Team Name</h4>
+          <h4 class="modal-title">Add New User</h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         
         <!-- Modal body -->
         <div class="modal-body">
-          Add Memeber..
+         <form>
+           <div class="form-group">
+            <label for="add_user_name" title="name to be displayed on task board required">Name:</label>
+            <input type="text" class="form-control" placeholder="Enter Member Display Name" id="add_user_name" required>
+          </div>
+            <div class="form-group">
+            <label for="add_user_joindate" title="when this user joined the company optional">Joined Date:</label>
+            <input type="date" id="add_user_joindate" class="form-control">
+          </div>         
+          <div class="form-group">
+            <label for="add_user_role">Role:</label>
+            <select class="form-control" id="add_user_role" required>
+              <option value="viewer" selected>Viewer</option>
+              <option value="editor">Editor</option>
+              <option value="admin">Admin</option>            
+            </select>
+          </div>
+          
+          
+          <div class="form-group">
+            <label for="add_user_position" >Position:</label>
+            <input type="text" id="add_user_position" class="form-control" placeholder="Enter User Position">
+          </div>
+            <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" class="form-control" placeholder="Enter user login" required>
+          </div>
+           <div class="form-group">
+            <label for="userpass">Password:</label>
+            <input type="password" class="form-control" id="userpass" placeholder="Enter User password" required>
+          </div>
+             <div class="form-group">
+            <label for="email" title="note you can not add user without team exist Add team first">team:</label>
+            <select class="form-control" required>
+            
+            </select>
+          </div>        
+          
         </div>
         
         <!-- Modal footer -->
         <div class="modal-footer">
+          
           <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+           <button type="submit" class="btn btn-primary">Submit</button>
         </div>
+        </form>
         
       </div>
     </div>
