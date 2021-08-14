@@ -333,7 +333,7 @@
         <div class="modal-footer">
           
           <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-           <button type="submit" class="btn btn-primary">Submit</button>
+           <button type="submit" class="btn btn-success">Submit</button>
         </div>
         </form>
       </div>
@@ -398,7 +398,7 @@
         <div class="modal-footer">
           
           <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-           <button type="submit" class="btn btn-primary">Submit</button>
+           <button type="submit" class="btn btn-success">Submit</button>
         </div>
         </form>
         
@@ -420,13 +420,45 @@
         
         <!-- Modal body -->
         <div class="modal-body">
-          add Month..
+          <form>
+  <div class="form-group">
+  
+
+    <label for="email">Month Name:</label>
+    <select class="form-control">
+<option value="January" selected>January</option>
+<option value="February">February</option>
+<option value="March">March</option>
+<option value="April">April</option>
+<option value="May">May</option>
+<option value="June">June</option>
+<option value="July">July</option>
+<option value="August">August</option>
+<option value="September">September</option>
+<option value="October">October</option>
+<option value="November">November</option>
+<option value="December">December</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="add_month_date">Month Date:</label>
+    <input type="date" id="add_month_date" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="add_month_year">Year:</label>
+    <input type="number" value="2021" min="2002" id="add_month_year" class="form-control" required>
+  </div>
+  
+   
+  
         </div>
         
         <!-- Modal footer -->
         <div class="modal-footer">
+          <button type="submit" class="btn btn-success">Submit</button>
           <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
         </div>
+        </form>
         
       </div>
     </div>
@@ -437,6 +469,23 @@
 $(document).ready(function(){
   $('[data-toggle="tooltip"]').tooltip();
 });
+
+  const addMonthDateInput = document.getElementById("add_month_date");
+  const addMonthYearInput = document.getElementById("add_month_year");
+
+const getYearFromDate = ()=> {
+   if (addMonthDateInput.value == "") {
+      addMonthYearInput.value = "2021";
+      return false;
+   }
+
+  const date = new Date(addMonthDateInput.value);
+  addMonthYearInput.value = date.getFullYear();
+  
+}
+
+addMonthDateInput.addEventListener("change", getYearFromDate);
+
 </script>
 
 </body>
