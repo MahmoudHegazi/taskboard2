@@ -246,85 +246,40 @@
 </div>
 
 
+<div class="container mt-5">
+<h2>Automate Add Full Year</h2>
+<form class="form-inline">
+  <label for="automate_year_input" class="mr-sm-2">Enter Year:</label>
+  <input type="number" class="form-control mb-2 mr-sm-2" placeholder="Year" min="2002" max="99999" id="automate_year_input" required>
+  <button type="submit" class="btn btn-primary mb-2">Submit</button>
+</form>
+
+</div>
 
 <!-- models -->
 
-  <!-- Edit Team Model -->
+ 
+      <!-- Add Team Model -->
   <div class="modal" id="editTeam">
-    <div class="modal-dialog">
-      <div class="modal-content">
-      
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h4 class="modal-title">Team Name</h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-        
-        <!-- Modal body -->
-        <div class="modal-body">
-          Edit Team.
-        </div>
-        
-        <!-- Modal footer -->
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-        </div>
-        
-      </div>
-    </div>
-  </div>
-  <!-- end model -->
-  
-  
-  
-   <!-- Edit Memeber Model -->
-  <div class="modal" id="editMemeber">
-    <div class="modal-dialog">
-      <div class="modal-content">
-      
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h4 class="modal-title">Team Name</h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-        
-        <!-- Modal body -->
-        <div class="modal-body">
-          Edit memeber..
-        </div>
-        
-        <!-- Modal footer -->
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-        </div>
-        
-      </div>
-    </div>
-  </div>
-  <!-- end model -->
-  
-  
-    <!-- Add Team Model -->
-  <div class="modal" id="addTeam">
     <div class="modal-dialog">
       <div class="modal-content">      
         <!-- Modal Header -->
         <div class="modal-header">
-          <h4 class="modal-title">Add New Team</h4>
+          <h4 class="modal-title">Edit Team Name</h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>        
         <!-- Modal body -->
         <div class="modal-body">
          <form>
            <div class="form-group">
-            <label for="email">Title:</label>
-            <input type="email" class="form-control" placeholder="Enter email" id="email" required>
+            <label for="edit_team_title">Team Title:</label>
+            <input type="text" id="edit_team_title" class="form-control" placeholder="Enter Team Title" required>
           </div>
   
   <div class="form-group">
-    <label for="pwd">Color:</label>
-    <input type="text" class="form-control" placeholder="Enter Label Color" id="classname">
-    <input type="color" class="form-control" id="classcolor">
+    <label for="edit_team_color">Color:</label>
+    <input type="text" class="form-control" placeholder="Enter Label Color" id="edit_team_colorname">
+    <input type="color" class="form-control" id="edit_team_color">
   </div>
           
         </div>
@@ -341,7 +296,117 @@
   </div>
   <!-- end model -->
   
-    <!-- Edit Team Model -->
+  
+ 
+  
+     <!-- Add New User Model -->
+  <div class="modal" id="editMemeber">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Edit User</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+         <form>
+           <div class="form-group">
+            <label for="edit_user_name" title="name to be displayed on task board required">Name:</label>
+            <input type="text" class="form-control" placeholder="Enter Member Display Name" id="edit_user_name" required>
+          </div>
+            <div class="form-group">
+            <label for="edit_user_joindate" title="when this user joined the company optional">Joined Date:</label>
+            <input type="date" id="edit_user_joindate" class="form-control">
+          </div>         
+          <div class="form-group">
+            <label for="edit_user_role">Role:</label>
+            <select class="form-control" id="edit_user_role" required>
+              <option value="viewer" selected>Viewer</option>
+              <option value="editor">Editor</option>
+              <option value="admin">Admin</option>            
+            </select>
+          </div>
+          
+          
+          <div class="form-group">
+            <label for="edit_user_position" >Position:</label>
+            <input type="text" id="edit_user_position" class="form-control" placeholder="Enter User Position">
+          </div>
+            <div class="form-group">
+            <label for="edit_user_username">Username:</label>
+            <input type="text" id="edit_user_username" class="form-control" placeholder="Enter user login" required>
+          </div>
+           <div class="form-group">
+            <label for="edit_user_pass">Password:</label>
+            <input type="password" class="form-control" id="edit_user_pass" placeholder="Enter User password" required>
+          </div>
+             <div class="form-group">
+            <label for="edit_user_id" title="note you can not add user without team exist Add team first">team:</label>
+            <select id="edit_user_id" class="form-control" required>
+            
+            </select>
+          </div>        
+          
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+           <button type="submit" class="btn btn-success">Submit</button>
+        </div>
+        </form>
+        
+      </div>
+    </div>
+  </div>
+  <!-- end model -->
+  
+  
+  
+  
+  
+    <!-- Add Team Model -->
+  <div class="modal" id="addTeam">
+    <div class="modal-dialog">
+      <div class="modal-content">      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Add New Team</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>        
+        <!-- Modal body -->
+        <div class="modal-body">
+         <form>
+           <div class="form-group">
+            <label for="add_team_title">Team Title:</label>
+            <input type="text" class="form-control" placeholder="Enter Team Title" id="add_team_title" required>
+          </div>
+  
+  <div class="form-group">
+    <label for="add_team_colorname">Color:</label>
+    <input type="text" class="form-control" placeholder="Enter Label Color" id="add_team_colorname">
+    <input type="color" class="form-control" id="add_team_color">
+  </div>
+          
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+           <button type="submit" class="btn btn-success">Submit</button>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- end model -->
+  
+    <!-- Add New User Model -->
   <div class="modal" id="addMemeber">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -378,16 +443,16 @@
             <input type="text" id="add_user_position" class="form-control" placeholder="Enter User Position">
           </div>
             <div class="form-group">
-            <label for="username">Username:</label>
-            <input type="text" id="username" class="form-control" placeholder="Enter user login" required>
+            <label for="add_user_username">Username:</label>
+            <input type="text" id="add_user_username" class="form-control" placeholder="Enter user login" required>
           </div>
            <div class="form-group">
-            <label for="userpass">Password:</label>
-            <input type="password" class="form-control" id="userpass" placeholder="Enter User password" required>
+            <label for="add_user_pass">Password:</label>
+            <input type="password" class="form-control" id="add_user_pass" placeholder="Enter User password" required>
           </div>
              <div class="form-group">
-            <label for="email" title="note you can not add user without team exist Add team first">team:</label>
-            <select class="form-control" required>
+            <label for="add_user_team" title="note you can not add user without team exist Add team first">team:</label>
+            <select id="add_user_team" class="form-control" required>
             
             </select>
           </div>        
@@ -407,7 +472,7 @@
   </div>
   <!-- end model -->
   
-    <!-- Edit Team Model -->
+    <!-- Add Month Model -->
   <div class="modal" id="addMonth">
     <div class="modal-dialog">
       <div class="modal-content">
