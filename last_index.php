@@ -707,6 +707,24 @@ if ($teamidResult->num_rows > 0) {
       return false;
     }
 
+    const pauseAddNow = ()=> {
+      const allAdds = document.querySelectorAll(".add_new_card");
+      allAdds.forEach((item) => {
+        if (window.getComputedStyle(item, null).display && window.getComputedStyle(item, null).display == "block"){
+                item.style.display = "none";
+         }
+      });
+    };
+
+    const pauseToolBarNow = ()=> {
+      const allAdds = document.querySelectorAll(".card_toolbar");
+      allAdds.forEach((item) => {
+        if (window.getComputedStyle(item, null).display && window.getComputedStyle(item, null).display == "block"){
+                item.style.display = "none";
+         }
+      });
+    };
+
 
     allTasksContainers.forEach( (card)=>{
       card.addEventListener("mouseenter", showCardAddBtn);
@@ -1268,12 +1286,15 @@ if ($teamidResult->num_rows > 0) {
   }
 
     function dragLeave(event) {
+      event.target.style.border = "none";
       if (event.target.classList.contains("tasks-card-container")){
         event.target.style.border = "none";
+        pauseToolBarNow();
       }
     }
 
     function dragEnd(event) {
+      event.target.style.border = "none";
       if (event.target.classList.contains("tasks-card-container")){
         event.target.style.border = "none";
       }
@@ -1293,8 +1314,9 @@ if ($teamidResult->num_rows > 0) {
     }
 
     function dragStart(event) {
-
       if (event.target && event.target.classList && event.target.classList.contains("task_card")){
+        pauseAddNow();
+        pauseToolBarNow();
         event.dataTransfer.setData("text", event.target.id);
         currenDragHeight = event.target.offsetHeight;
         return true;
@@ -1327,11 +1349,13 @@ if ($teamidResult->num_rows > 0) {
               break;
               return true;
             }
+            event.target.style.border = "none";
             break;
           }
           index++;
         }
       }
+      event.target.style.border = "none";
       return false;
     }
 
